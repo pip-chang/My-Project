@@ -1,13 +1,13 @@
 # Reddit Corpus Analysis
 
 ## Purpose of the Project
----
+
 This is a project I started to aid my qualitative anthropological research of highly active and diverse Reddit communities in terms of how they sustain themselves as a system, and how different users interact with the community and experience a sense of beloning.
 
 It is also a way for me to learn data collection methods and analyzing skills that I will need in my thesis research. Through this learning process, I've picked up various methods to scrape readily available data with python scripts, whether be it using an API or building a crawler. I've improved my programming skills and increased my proficiency in useful python libraries for data analysis and visualization. Furthermore, I came to discover exploratory data analysis strategies based on corpus analysis and natural language processing, which serve to reveal insights and features of interest that aren't so visible when approached with traditional close reading methods. Such strategies can help me explore and assess datasets more efficiently, and make more informed decisions when selecting methods for my research questions, or identify new questions.
 
 ## Code Description
----
+
 1. Collecting & Storing Data
 
 In the script `"collect_data.py"`, I used [PSAW](https://github.com/dmarx/psaw)[^1], a python wrapper for the PushShift API, to collect all submissions and comments in the Subreddit r/TooAfraidToAsk from its conception to December 2020.
@@ -45,7 +45,6 @@ The corpus can also be analyzed using NLP methods. In `nlp_example.ipynb`, the T
 There are many more ways to analyze data with nlp methods, for example combining TF-IDF with n-grams to analyze political speeches, using sentiment analysis and topic modeling to characterize emotions in conversations, etc.
 
 ## Conclusion
----
 
 As I intend to do conduct my thesis research using discourse analysis methods, this project has opened up more possibilities for me to more effectively collect and explore data. What is particularly useful, is the possibility to approach discourses on social media from a much more informed starting point.
 
