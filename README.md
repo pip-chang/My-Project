@@ -2,7 +2,7 @@
 
 ## Purpose of the Project
 
-This is a project I started to aid my qualitative anthropological research of highly active and diverse Reddit communities in terms of how they sustain themselves as a system, and how different users interact with the community and experience a sense of beloning.
+This is a project I started to aid my qualitative anthropological research of highly active and diverse Reddit communities in terms of how they sustain themselves as a system, and how different users interact with the community and experience a sense of belonging.
 
 It is also a way for me to learn data collection methods and analyzing skills that I will need in my thesis research. Through this learning process, I've picked up various methods to scrape readily available data with python scripts, whether be it using an API or building a crawler. I've improved my programming skills and increased my proficiency in useful python libraries for data analysis and visualization. Furthermore, I came to discover exploratory data analysis strategies based on corpus analysis and natural language processing, which serve to reveal insights and features of interest that aren't so visible when approached with traditional close reading methods. Such strategies can help me explore and assess datasets more efficiently, and make more informed decisions when selecting methods for my research questions, or identify new questions.
 
@@ -12,7 +12,7 @@ It is also a way for me to learn data collection methods and analyzing skills th
 
 In the script `"collect_data.py"`, I used [PSAW](https://github.com/dmarx/psaw)[^1], a python wrapper for the PushShift API, to collect all submissions and comments in the Subreddit r/TooAfraidToAsk from its conception to December 2020.
 
-In each run of the script, the data is collected in chunks from earliest date to latest, and written into jsonlines files, each line being one submission or comment with its metadata based on the parameters. It keeps track of the latest data colletced using its epoch, and starts from where it's left off in the next run. Each jsonline file is limited to maximum 500,000 lines for easier processing.
+In each run of the script, the data is collected in chunks from earliest date to latest, and written into jsonlines files, each line being one submission or comment with its metadata based on the parameters. It keeps track of the latest data collected using its epoch, and starts from where it's left off in the next run. Each jsonlines file is limited to maximum 500,000 lines for easier processing.
 
 2. Cleaning & Processing Data
 
@@ -32,9 +32,9 @@ Due to the various ways you can manipulate data easily with numpy and pandas, no
 
 4. Building Desired Corpora
 
-There are idfferent ways one can build a corpus, usually dependent on with what tools one explores the corpus with. As I intend to explore the corpus using AntConc, a freeware corpus analysis toolkit, who can import txt files, the script `corpus.ipynb` can sample and filter needed data and export them in a txt file.
+There are different ways one can build a corpus, usually dependent on with what tools one explores the corpus with. As I intend to explore the corpus using AntConc, a freeware corpus analysis toolkit, who can import txt files, the script `corpus.ipynb` can sample and filter needed data and export them in a txt file.
 
-If you don't change anything and run every cell in the script in order, it will extract a certain number of non-mod-made comments from the sample data that are longer than 50 tokens containing at least one of the keywords "community, subreddit, identity, belonging, group, people". (The process might take a few minutes.) I used regex to match all the different forms of the keywords. One can also use nltk to lemmatize the texts, but it is not really necessary here. Each txt files has no more than 20000 entries to ensure AntConc works more smoothly, even though it can handle up to 10 million words.
+If you don't change anything and run every cell in the script in order, it will extract a certain number of non-mod-made comments from the sample data that are longer than 50 tokens containing at least one of the keywords "community, Subreddit, identity, belonging, group, people". (The process might take a few minutes.) I used regex to match all the different forms of the keywords. One can also use nltk to lemmatize the texts, but it is not really necessary here. Each txt files has no more than 20000 entries to ensure AntConc works more smoothly, even though it can handle up to 10 million words.
 
 5. Exploring Corpora
 
@@ -50,4 +50,4 @@ As I intend to do conduct my thesis research using discourse analysis methods, t
 
 ## Notes
 
-[^1]: PushShift API has expreienced a switchover recently and it has caused the wrapper to stop working. However, [PMAW](https://github.com/mattpodolak/pmaw) is updated and is compatible with the current PushShift API.
+[^1]: PushShift API has expreienced a switchover recently, and it has caused the wrapper to stop working. However, [PMAW](https://github.com/mattpodolak/pmaw) is updated and is compatible with the current PushShift API.

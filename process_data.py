@@ -99,7 +99,7 @@ class DataHandler:
 
 class DataProcessor(DataHandler):
     """
-    process input data from the generator and return result
+    process input data from the generator and export result
     """
 
     def __init__(
